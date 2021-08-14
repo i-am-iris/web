@@ -1,0 +1,54 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Administrators page
+.administrators-page {
+
+  main {
+
+    // Administrators showcase
+    .administrators {
+
+      display: flex;
+      flex-flow: column nowrap;
+      .grid;
+      margin: 1em auto;
+
+      @media (min-width: @mediaQueryMedium) {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+      }
+
+      li {
+
+        margin: 0 0 3em;
+
+        @media (min-width: @mediaQueryMedium) {
+          width: 26%;
+        }
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: auto;
+
+          border-radius: 1.25em;
+          box-shadow: 0 0 0.25em rgba(0, 0, 0, .25);
+
+          margin: 0 0 1em;
+        }
+
+        p {
+          font-size: .9em;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Dashboard page
+.dashboard-page {
+
+  // Dashboard box
+  .dashboard-boxes {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    .dashboard-box {
+      .grid;
+      display: flex;
+      flex-flow: column nowrap;
+      border-radius: .35em;
+      box-shadow: 0 0 3px @color14;
+      margin: 2em 0 0;
+
+      @media (min-width: @mediaQueryMedium) {
+        .grid(5);
+      }
+
+      & > h6 {
+        font-size: .89em;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        margin: 0;
+        background-color: @color13;
+        color: @color15;
+      }
+
+      & > section {
+        flex-grow: 1;
+        padding: 15px 10px;
+
+        .dashboard-box-content {
+          min-height: 70px;
+
+          @media (min-width: @mediaQueryMedium) {
+            display: flex;
+            flex-flow: column nowrap;
+            height: 120px;
+            overflow-y: auto;
+
+            &.dashboard-box-content-centered {
+              justify-content: center;
+            }
+          }
+        }
+
+        .dashboardControls {
+          ul {
+            justify-content: center;
+
+            @media (min-width: @mediaQueryMedium) {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Payment info
+  .payment-info-totals {
+    p {
+      font-size: 1.1em;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    small {
+      display: block;
+      font-size: .9em;
+      margin: -.1em 0 .8em;
+      text-align: center;
+    }
+
+    strong {
+      font-size: 1.15em;
+    }
+  }
+
+  // Counters table data
+  .counters-table-data {
+    font-size: .9em;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+
+    td {
+      padding: 0;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        text-align: center;
+      }
+    }
+  }
+
+  // Location selector
+  .location-selector {
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      .pull-right;
+      flex-flow: row nowrap;
+    }
+
+    select {
+
+      width: 100%;
+
+      vertical-align: top;
+      text-overflow: ellipsis;
+      display: inline-block;
+
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+      padding: .5em;
+      font-size: .9em;
+
+      &:-moz-focusring,
+      option:-moz-focusring {
+        color: transparent !important;
+        text-shadow: 0 0 0 #000 !important;
+      }
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      option {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: none;
+        padding-left: 5px;
+        border: 1px solid #fff;
+        background: #ffffff;
+      }
+    }
+  }
+
+  // Navigation
+  /*.dashboardControls {
+
+    .grid();
+
+    ul {
+      text-align: center;
+
+      li {
+
+        display: inline-block;
+        margin: 2em;
+
+        a {
+
+          width: 200px;
+          height: 160px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-flow: column nowrap;
+
+          border: 1px solid #ccc;
+          border-radius: .35em;
+
+          background: rgb(199, 199, 199);
+          background: linear-gradient(180deg, #f1f1f1 0%, rgba(250, 250, 250, 1) 100%);
+
+          font-size: 1.2em;
+
+          span[data-icon] {
+            font-size: 2.4em;
+          }
+        }
+      }
+    }
+  }*/
+}
+
+// Receipt page
+.receipt-page {
+
+  // Apartment selector
+  .apartmentsSelector {
+    .grid();
+
+    ol {
+      list-style: decimal inside;
+    }
+  }
+}

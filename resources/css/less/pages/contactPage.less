@@ -1,0 +1,48 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Contact page
+.contact-page {
+
+  main {
+
+    // Cover
+    .cover {
+      position: relative;
+      height: 450px;
+      padding: 2em 1em;
+      margin: 0 0 2em;
+
+      &:before {
+
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .grid;
+        height: 100%;
+
+        z-index: -1;
+        background: url('@{S3}cover/adminis.jpg') no-repeat center;
+        background-size: cover;
+
+        opacity: .8;
+      }
+    }
+
+    img.map {
+      object-position: center;
+      object-fit: cover;
+
+      .grid;
+      height: auto;
+
+      box-shadow: 0 0 .4em rgba(0, 0, 0, .2);
+    }
+  }
+}

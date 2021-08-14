@@ -1,0 +1,52 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Online Pay page
+.online-pay-page {
+
+  // Payment options
+  .payment-options {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    // Payment option labels
+    label {
+
+      strong {
+        font-size: 1.2em;
+      }
+
+      span {
+        display: block;
+        font-size: .9em;
+        margin: -.2em 0 0;
+      }
+    }
+  }
+
+  input[type=radio][name=paymentOption] {
+    margin: 0 1em 0 0;
+  }
+
+  // Payment other amounts
+  .payment-other-amount {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: .9em;
+    padding: 1em;
+
+    .payment-other-amount-value {
+      margin: 0 1em;
+    }
+
+    .payment-other-amount-button {
+      margin: 0 0 0 1em;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Receipt page
+.testimonials-page {
+
+  // Testimonials
+  .testimonials {
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+
+      position: relative;
+      text-align: center;
+      margin: 2em 0 0;
+
+      &:nth-child(1) {
+        margin: 0;
+      }
+
+      &:before {
+
+        position: absolute;
+
+        font-family: 'adminis';
+        font-variant: normal;
+        font-weight: normal;
+        font-style: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: .6;
+        vertical-align: middle;
+
+        content: '\e01c';
+
+        top: 20px;
+        left: 10px;
+
+        font-size: 3em;
+        color: #f1f1f1;
+
+        z-index: -1;
+      }
+
+      @media (min-width: @mediaQueryMedium) {
+
+        margin: 1em;
+        width: 35%;
+      }
+
+      h3 {
+        text-align: center;
+      }
+
+      p {
+
+        margin: 1em 0 0;
+
+        &.author {
+
+          font-weight: 700;
+
+          span {
+            display: block;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

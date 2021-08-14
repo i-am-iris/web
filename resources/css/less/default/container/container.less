@@ -1,0 +1,30 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+
+  @media (min-width: @mediaQueryMedium) {
+    width: 750px;
+  }
+
+  @media (min-width: @mediaQueryLarge) {
+    width: 970px;
+  }
+
+  @media (min-width: @mediaQueryExtraLarge) {
+    width: 1170px;
+  }
+}
+
+.grid(@grid: 12) {
+  width: (@grid * 100%) / 12;
+}

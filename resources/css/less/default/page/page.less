@@ -1,0 +1,38 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+// Default page structure
+.page {
+  display: flex;
+  flex-flow: column nowrap;
+
+  height: 100%;
+  min-height: 100%;
+
+  // No scroll
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  // Header
+  @import "header";
+
+  // Main
+  @import "main";
+
+  // Footer
+  @import "footer";
+
+  // Dialogs
+  @import "dialogs";
+
+  // Sections
+  @import "sections";
+}

@@ -1,0 +1,36 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+// Button structure mixin
+.define-button (@textColor, @backgroundColor, @backgroundColorHover) {
+  background-color: @backgroundColor;
+
+  color: @textColor;
+  text-decoration: none;
+
+  &:hover {
+    background-color: @backgroundColorHover;
+
+    color: @textColor;
+    text-decoration: none;
+  }
+}
+
+.define-button-bordered (@textColor, @borderColor, @borderColorHover) {
+  border: 1px solid @borderColor;
+  background: transparent;
+
+  color: @textColor;
+  text-decoration: none;
+
+  &:hover {
+    border-color: @borderColorHover;
+  }
+}

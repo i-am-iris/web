@@ -1,0 +1,230 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Sections
+section {
+  .grid;
+
+  @media (min-width: @mediaQueryMedium) {
+    padding: 1em;
+  }
+
+  // Section with columns
+  &.cols {
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media (min-width: @mediaQueryMedium) {
+      flex-flow: row nowrap;
+      width: 100%;
+    }
+
+    &.cols-centered {
+      align-items: center;
+    }
+
+    &.cols-reversed {
+      flex-flow: column-reverse nowrap;
+
+      @media (min-width: @mediaQueryMedium) {
+        flex-flow: row nowrap;
+        width: 100%;
+      }
+    }
+
+    & > div {
+      position: relative;
+      //padding: 2em 1em;
+
+      @media (min-width: @mediaQueryMedium) {
+        //padding: 2em;
+      }
+    }
+
+    &.withNoPadding {
+      padding: 0;
+    }
+
+    &.withSpaceAround {
+      justify-content: space-around;
+    }
+
+    // With separator
+    &.withSeparatorLine {
+      & > div:nth-child(1) {
+        @media (min-width: @mediaQueryMedium) {
+          &:after {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            content: '';
+
+            width: 3px;
+            height: 50%;
+            opacity: .2;
+
+            background: linear-gradient(to bottom, @color9, @color5);
+          }
+        }
+      }
+    }
+
+    // 2 columns section
+    &.cols-2 {
+      & > div {
+        @media (min-width: @mediaQueryMedium) {
+          .grid(6)
+        }
+      }
+    }
+
+    // 3 columns section
+    &.cols-3 {
+      & > div {
+        @media (min-width: @mediaQueryMedium) {
+          .grid(4)
+        }
+      }
+    }
+
+    // 8/4 columns section
+    &.cols-8-4 {
+      & > div {
+        &:nth-child(1) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(8)
+          }
+        }
+
+        &:nth-child(2) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(4);
+          }
+        }
+      }
+    }
+
+    // 7/5 columns section
+    &.cols-7-5 {
+      & > div {
+        &:nth-child(1) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(7)
+          }
+        }
+
+        &:nth-child(2) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(5);
+          }
+        }
+      }
+    }
+
+    // 5/7 columns section
+    &.cols-5-7 {
+      & > div {
+        &:nth-child(1) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(5)
+          }
+        }
+
+        &:nth-child(2) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(7);
+          }
+        }
+      }
+    }
+
+    // 7/5 columns section
+    &.cols-4-2-3 {
+      & > div {
+        &:nth-child(1){
+          @media (min-width: @mediaQueryMedium) {
+            .grid(4);
+          }
+        }
+
+        &:nth-child(2) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(2);
+          }
+        }
+
+        &:nth-child(3){
+          @media (min-width: @mediaQueryMedium) {
+            .grid(3);
+          }
+        }
+      }
+    }
+
+    // 5/7 columns section
+    &.cols-4-8 {
+      & > div {
+        &:nth-child(1) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(4)
+          }
+        }
+
+        &:nth-child(2) {
+          @media (min-width: @mediaQueryMedium) {
+            .grid(8);
+          }
+        }
+      }
+    }
+
+    nav {
+      .grid;
+
+      & > ul {
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        @media (min-width: @mediaQueryMedium) {
+          flex-flow: row nowrap;
+        }
+
+        &.ul-align-top {
+          align-items: flex-start;
+        }
+
+        &.ul-margin-1 {
+          margin:1em auto;
+
+          @media (min-width: @mediaQueryMedium) {
+            margin: 1em 0;
+          }
+        }
+
+        & > li {
+          margin: 1em 0 0;
+
+          &:nth-child(1) {
+            margin: 0;
+          }
+
+          @media (min-width: @mediaQueryMedium) {
+            margin: 0 0 0 1em;
+
+            &:nth-child(1) {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

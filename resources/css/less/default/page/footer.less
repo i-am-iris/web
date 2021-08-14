@@ -1,0 +1,70 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Footer
+footer {
+  padding: 2em 0 3em;
+  font-size: .84em;
+  text-align: center;
+
+  background-color: @color11;
+  color: @textColor;
+  border-top: 1px solid @color13;
+
+  @media (min-width: @mediaQueryMedium) {
+    text-align: left;
+  }
+
+  nav {
+    margin: 1.5em auto 0;
+
+    @media (min-width: @mediaQueryMedium) {
+      margin: 0;
+    }
+
+    &:nth-child(3) {
+      @media (min-width: @mediaQueryMedium) {
+        margin: 1em 0 0;
+      }
+    }
+
+    &:nth-child(4) {
+      padding: 1em 0;
+
+      @media (min-width: @mediaQueryMedium) {
+        margin: 2em 0 0;
+      }
+    }
+
+    ul {
+      li {
+        margin: 0;
+
+        @media (min-width: @mediaQueryMedium) {
+          margin: 0 0 0 1em;
+        }
+      }
+    }
+  }
+
+  h5 {
+    font-size: .9em;
+    font-weight: 700;
+  }
+
+  // Company information
+  .company {
+    text-align: center;
+    margin: 0 auto 2em;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: right;
+      margin: 0;
+    }
+  }
+
+}

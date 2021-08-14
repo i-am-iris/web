@@ -1,0 +1,41 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+// Default
+// Background: #f1f1f1
+// Text color: #222
+.btn-default {
+  .define-button(@buttonDefaultTextColor, @buttonDefaultBackgroundColor, @buttonDefaultBackgroundHoverColor);
+}
+
+.btn-default-bordered {
+  .define-button-bordered(@buttonDefaultTextColor, @buttonDefaultBackgroundColor, @buttonDefaultBackgroundHoverColor);
+}
+
+// Button #1
+.btn-1 {
+  .define-button(@textColorWhite, @color5, darken(@color5, 10%));
+}
+
+.btn-1-bordered {
+  .define-button-bordered(@textColor, @color5, darken(@color5, 10%));
+}
+
+// Button #2
+.btn-2 {
+  .define-button(@textColorWhite, @color7, darken(@color7, 10%));
+}
+
+// Slide button
+.btn-slide {
+  background: transparent;
+  font-size: 1.6em;
+  margin: 0 10px 0 -70px;
+}

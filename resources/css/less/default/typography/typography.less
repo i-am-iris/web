@@ -1,0 +1,178 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:invalid {
+  box-shadow: none; /* FF */
+  outline: 0; /* IE 10 */
+}
+
+// Input placeholder color
+::placeholder {
+  opacity: 1;
+  color: @color14;
+}
+
+:-ms-input-placeholder {
+  color: @color14;
+}
+
+::-ms-input-placeholder {
+  color: @color14;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 16px/1.7em 'Nunito', Arial, sans-serif;
+  color: @textColor;
+  padding: 0;
+  margin: 0;
+
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.015);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+a {
+  color: @linkColor;
+  text-decoration: none;
+
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:active, &:focus {
+    outline: 0;
+  }
+
+  &:not(.btn):not(.na):not(.logo) {
+    border-bottom: 2px solid @color3;
+
+    &:hover {
+      border-bottom-color: @color4;
+    }
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+picture {
+  display: block;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 1.4em;
+  line-height: 1.35em;
+  font-weight: 400;
+
+  margin: 0;
+
+  @media (min-width: @mediaQueryMedium) {
+    text-align: left;
+  }
+
+  a {
+    border-bottom: none;
+  }
+}
+
+h1 {
+  font-size: 2em;
+  // letter-spacing: -.06em;
+  text-shadow: 0 0 .5em rgba(0, 0, 0, .1);
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.22em;
+}
+
+h5 {
+  font-size: 1.06em;
+  line-height: 1em;
+}
+
+h6 {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 1.06em;
+  line-height: 1em;
+}
+
+input, button, label, textarea {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+blockquote {
+  position: relative;
+
+  margin: 0 0 1em;
+  padding: 1em 2em;
+
+  .grid;
+
+  &:before {
+    position: absolute;
+    content: '';
+
+    .grid;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    border-left: 5px solid darken(@color7, 10%);
+    background-color: @color7;
+    opacity: .1;
+
+    z-index: -1;
+  }
+}
+
+hr {
+
+
+}

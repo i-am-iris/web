@@ -1,0 +1,120 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Receipt page
+.receipt-page {
+
+  // Receipt data
+  .receipt-data {
+
+    .grid;
+
+    // META
+    .receipt-meta {
+
+      margin: 0 0 2em;
+
+      .label {
+        display: inline-block;
+        margin: 0 .5em 0 0;
+
+        @media (min-width: @mediaQueryMedium) {
+          text-align: right;
+          width: 200px;
+        }
+
+        &:after {
+          content: ':';
+        }
+      }
+    }
+
+    // Table
+    table {
+
+      margin: 1em 0 3em;
+
+      tr {
+        td {
+
+          &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+            max-width: 4em;
+            text-align: center;
+          }
+        }
+      }
+
+      tfoot {
+
+        .receipt-meta {
+          padding: 1em;
+          font-size: .9em;
+          margin: 0;
+          text-align: center;
+
+          @media (min-width: @mediaQueryMedium) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    // Payment info
+    .payment-info,
+    .responsible {
+      ul {
+        border: 1px solid @color14;
+        padding: 1em;
+        border-radius: .35em;
+      }
+    }
+
+    // Responsible
+    .responsible {
+
+      font-size: 1.15em;
+
+      ul {
+        position: relative;
+
+        &:before {
+          position: absolute;
+
+          font-family: 'adminis';
+          font-variant: normal;
+          font-weight: normal;
+          font-style: normal;
+          text-transform: none;
+          text-rendering: auto;
+          line-height: .6;
+          vertical-align: middle;
+
+          content: '\e015';
+
+          font-size: 2em;
+          top: 1em;
+          left: 0.5em;
+
+        }
+      }
+    }
+
+    h3 {
+      margin: 1em 0;
+
+      @media (min-width: @mediaQueryMedium) {
+        margin: 0 0 1em;
+      }
+
+      .receipt-paid {
+        text-transform: uppercase;
+        color: @color7;
+        float: right;
+      }
+    }
+  }
+}

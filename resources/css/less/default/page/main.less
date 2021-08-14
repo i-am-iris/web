@@ -1,0 +1,168 @@
+/*
+ * Adminis Locuințe - Management platform
+ * @link https://adminislocuinte.ro
+ *
+ * Copyright 2020 Adminis. All rights reserved.
+ */
+
+// Main
+main {
+  padding: 2.4em 0;
+
+  @media (min-width: @mediaQueryMedium) {
+    flex-grow: 1;
+  }
+
+  // Container
+  .container {
+    /*display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;*/
+  }
+
+  h1 {
+    margin: 0 auto .6em;
+
+    @media (min-width: @mediaQueryMedium) {
+      display: inline-block;
+      margin: 0 0 .6em;
+    }
+  }
+
+  h2 {
+    margin: 0 auto 1.4em;
+
+    @media (min-width: @mediaQueryMedium) {
+      margin: 0 0 1.4em;
+    }
+  }
+
+  h4 {
+    margin: 1em auto .8em;
+
+    @media (min-width: @mediaQueryMedium) {
+      margin: 2em 0 .8em;
+    }
+  }
+
+  h5 {
+    margin: 0 0 1em;
+  }
+
+  p {
+    margin: 0 0 1.2em;
+    font-size: 1.1em;
+  }
+
+  // Unordered list
+  ul.unordered {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: .4em 1em 1em;
+
+    li {
+      padding: .2em;
+    }
+  }
+
+  // Navigation
+  nav {
+    .grid;
+
+    & > ul {
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: @mediaQueryMedium) {
+      }
+
+      li {
+        margin: 0 0 0 1em;
+
+        &:nth-child(1) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Table
+  table {
+
+    .grid;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, .15);
+    padding: 1em;
+    border-radius: .35em;
+
+    // Small width table
+    &.table-sm {
+      @media (min-width: @mediaQueryMedium) {
+        .grid(7);
+      }
+    }
+
+    thead {
+      text-transform: uppercase;
+      font-size: .86em;
+      font-weight: 700;
+
+      tr {
+
+        td {
+          padding: .3em;
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+        background-color: @color13;
+        font-size: .9em;
+
+        &:nth-child(odd) {
+          background-color: @color11;
+        }
+
+        td {
+          padding: .3em;
+        }
+      }
+    }
+  }
+
+  // Images
+  img {
+
+    &.img-400 {
+
+      width: 100%;
+      height: auto;
+
+      @media (min-width: @mediaQueryMedium) {
+        width: 400px;
+      }
+    }
+
+    &.img-pull-right {
+
+      margin: 1em auto;
+
+      @media (min-width: @mediaQueryMedium) {
+        .pull-right;
+        margin: 1em 0 2em 2em;
+      }
+    }
+
+    &.img-bordered {
+      border-radius: .25em;
+    }
+
+    &.img-shadowed {
+      box-shadow: 0 0 .35em rgba(0, 0, 0, .4);
+    }
+  }
+}

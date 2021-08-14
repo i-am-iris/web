@@ -1,0 +1,62 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+.use-logo (@width: 64, @height: 64, @logoSize: 'sm') {
+
+  position: relative;
+  display: inline-block;
+
+  line-height: ~"calc(@{height}px + 4px)";
+  padding-left: 76px;
+  margin: auto;
+
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 2em;
+  color: @color4;
+
+  &:before {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    left: 0;
+
+    width: ~"@{width}px";
+    height: ~"@{height}px";
+
+    background: url('@{S3}avatar/avatar-64.png') no-repeat center;
+    background-size: cover;
+  }
+
+  @media (min-width: @mediaQueryMedium) {
+    margin: 0;
+  }
+}
+
+// Logo
+.logo {
+  .use-logo;
+
+  &.logo-centered {
+    margin: auto;
+  }
+
+  &.logo-lg {
+    .use-logo(270, 60);
+  }
+
+  &.logo-sm {
+    .use-logo(120, 27);
+  }
+
+  &.logo-mb-1 {
+    margin-bottom: 1em;
+  }
+}

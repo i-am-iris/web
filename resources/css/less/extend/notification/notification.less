@@ -1,0 +1,64 @@
+/*
+ * I am Iris
+ * personal project
+ *
+ * @link https://iamiris.ro
+ * @author Iris B. <iris@iamiris.ro>
+ * @copyright 2021 All rights reserved.
+ *
+ */
+
+// Notification container
+.notification-container {
+
+  margin: 1em auto;
+  text-align: center;
+
+  @media (min-width: @mediaQueryMedium) {
+    text-align: left;
+  }
+
+  // Notifications.
+  .notification,
+  .notification-error,
+  .notification-warning,
+  .notification-success,
+  .notification-info {
+    display: inline-block;
+
+    font-size: .9em;
+
+    padding: 10px 20px;
+    border-left: 3px solid transparent;
+
+    border-top-right-radius: .25em;
+    border-bottom-right-radius: .25em;
+
+    &.notification-lg {
+      font-size: 1.4em;
+    }
+
+    &.notification-centered {
+    }
+  }
+
+  .notification-error {
+    border-left-color: @label-error-background-color;
+    background-color: lighten(@label-error-background-color, 40%);
+  }
+
+  .notification-success {
+    border-left-color: @label-success-background-color;
+    background-color: lighten(@label-success-background-color, 40%);
+  }
+
+  .notification-warning {
+    border-left-color: @label-warning-background-color;
+    background-color: lighten(@label-warning-background-color, 40%);
+  }
+
+  .notification-info {
+    border-left-color: @label-info-background-color;
+    background-color: lighten(@label-info-background-color, 40%);
+  }
+}
